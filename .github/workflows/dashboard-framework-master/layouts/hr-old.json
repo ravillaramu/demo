@@ -1,0 +1,2828 @@
+
+[
+  {
+    "target": "#title-bar",
+    "widgetType": "titlebar",
+    "title": "WORKFORCE ANALYTICS",
+    "gridArea": "1/1/2/17",
+    "backgroundImage": "",
+    "data": {
+      "filter-count": 64.52,
+      "percentage": 200
+    }
+  },
+  {
+    "target": "#orders-received",
+    "widgetType": "data-count",
+    "title": "Headcount",
+    "gridArea": "2/1/4/3",
+    "datafield": "headcount",
+    "ArrowFlagField": "headcountFlag",
+    "backgroundImage": "url('images/Path 21827.PNG')",
+    "data": {
+      "filter-count": 12000,
+      "percentage": 5500000
+    }
+  },
+  {
+    "target": "#orders-cleared",
+    "widgetType": "data-count",
+    "title": "New Hires",
+    "gridArea": "2/3/4/5",
+    "datafield": "newhires",
+    "ArrowFlagField": "newhiresFlag",
+    "backgroundImage": "url('images/Path 21827.PNG')",
+    "data": {
+      "filter-count": 5000,
+      "percentage": 2230
+    }
+  },
+  {
+    "target": "#total-customers",
+    "widgetType": "data-count",
+    "title": "Attrition",
+    "gridArea": "4/1/6/3",
+    "datafield": "attrition",
+
+    "ArrowFlagField": "attritionFlag",
+    "backgroundImage": "url('images/Path 21827.PNG')",
+    "data": {
+      "filter-count": 1000,
+      "percentage": -500
+    }
+  },
+  {
+    "target": "#orders-shipped",
+    "widgetType": "data-count",
+    "title": "Attrition%",
+    "gridArea": "4/3/6/5",
+    "datafield": "attritionPercentage",
+
+    "ArrowFlagField": "attritionPercentageFlag",
+    "backgroundImage": "url('images/Path 21827.PNG')",
+    "data": {
+      "filter-count": 12,
+      "percentage": -1
+    }
+  },
+  {
+    "target": "#Global",
+    "widgetType": "global-chart",
+    "title": "Headcount",
+    "gridArea": "2/5/6/12",
+    "backgroundImage": "url('images/Union 40.PNG')",
+    "data": {
+      "filter-count": 23490,
+      "percentage": 1
+    }
+  },
+  {
+    "target": "#experts-view",
+    "widgetType": "list-view",
+    "title": "Business Unit Summary",
+    "gridArea": "6/1/10/5",
+    "backgroundImage": "",
+    "data": {
+      "filter-count": 23.45,
+      "percentage": -300
+    }
+  },
+  {
+    "target": "#pie-chart",
+    "widgetType": "pie-chart",
+    "title": "Headcount - BU wise",
+    "gridArea": "2/12/6/17",
+    "dimension": "bu",
+    "group": "bu",
+    "chart": {
+      "colors": []
+    }
+  },
+  {
+    "target": "#pie-chart2",
+    "widgetType": "pie-chart",
+    "title": "Gender wise Headcount",
+    "gridArea": "6/5/10/9",
+    "dimension": "gender",
+    "group": "gender",
+    "chart": {
+      "colors": []
+    }
+  },
+  {
+    "target": "#scatter-plot",
+    "widgetType": "scatter-plot",
+    "title": "Attrition 2022",
+    "dimension": ["gender","bu"],
+    "gridArea": "10/9/14/13",
+    "chart": {
+      "colors": ["#82C455"]
+    }
+  },
+  {
+    "target": "#row-chart",
+    "widgetType": "row-chart",
+    "title": "New Hires - Top 5 Months",
+    "gridArea": "16/6/18/11",
+    "dimension": "bu",
+    "group": "bu",
+    "chart": {
+      "colors": ["#82C455"]
+    }
+  },
+  {
+    "target": "#bar-chart",
+    "widgetType": "bar-chart",
+    "title": "Headcount All",
+    "gridArea": "6/9/10/17",
+    "dimension": "gender",
+    "group": "gender",
+    "chart": {
+      "colors": []
+    }
+  },
+  {
+    "target": "#bar-chart2",
+    "widgetType": "bar-chart",
+    "title": "Headcount Movement - Organization Unit",
+    "gridArea": "10/1/14/9",
+    "dimension": "organization_unit",
+    "group": "organization_unit",
+    "chart": {
+      "colors": []
+    }
+  },
+  {
+    "target": "#line-chart",
+    "widgetType": "line-chart",
+    "title": "Attrition Trend - YTD",
+    "gridArea": "10/13/14/17",
+    "dimension": "gender",
+    "group": "gender",
+    "chart": {
+      "colors": []
+    }
+  },
+  {
+    "target": "#bubble",
+    "widgetType": "bubble",
+    "title": "Bubble",
+    "gridArea": "18/1/22/9",
+    "chart": {
+      "data" : [
+        {
+          "height": "151.765",
+          "weight": "47.8256065",
+          "age": "63",
+          "male": "1"
+        },
+        {
+          "height": "139.7",
+          "weight": "36.4858065",
+          "age": "63",
+          "male": "0"
+        },
+        {
+          "height": "136.525",
+          "weight": "31.864838",
+          "age": "65",
+          "male": "0"
+        },
+        {
+          "height": "156.845",
+          "weight": "53.0419145",
+          "age": "41",
+          "male": "1"
+        },
+        {
+          "height": "145.415",
+          "weight": "41.276872",
+          "age": "51",
+          "male": "0"
+        },
+        {
+          "height": "163.83",
+          "weight": "62.992589",
+          "age": "35",
+          "male": "1"
+        },
+        {
+          "height": "149.225",
+          "weight": "38.2434755",
+          "age": "32",
+          "male": "0"
+        },
+        {
+          "height": "168.91",
+          "weight": "55.4799715",
+          "age": "27",
+          "male": "1"
+        },
+        {
+          "height": "147.955",
+          "weight": "34.869885",
+          "age": "19",
+          "male": "0"
+        },
+        {
+          "height": "165.1",
+          "weight": "54.487739",
+          "age": "54",
+          "male": "1"
+        },
+        {
+          "height": "154.305",
+          "weight": "49.89512",
+          "age": "47",
+          "male": "0"
+        },
+        {
+          "height": "151.13",
+          "weight": "41.220173",
+          "age": "66",
+          "male": "1"
+        },
+        {
+          "height": "144.78",
+          "weight": "36.0322145",
+          "age": "73",
+          "male": "0"
+        },
+        {
+          "height": "149.9",
+          "weight": "47.7",
+          "age": "20",
+          "male": "0"
+        },
+        {
+          "height": "150.495",
+          "weight": "33.849303",
+          "age": "65.3",
+          "male": "0"
+        },
+        {
+          "height": "163.195",
+          "weight": "48.5626935",
+          "age": "36",
+          "male": "1"
+        },
+        {
+          "height": "157.48",
+          "weight": "42.3258035",
+          "age": "44",
+          "male": "1"
+        },
+        {
+          "height": "143.9418",
+          "weight": "38.3568735",
+          "age": "31",
+          "male": "0"
+        },
+        {
+          "height": "121.92",
+          "weight": "19.617854",
+          "age": "12",
+          "male": "1"
+        },
+        {
+          "height": "105.41",
+          "weight": "13.947954",
+          "age": "8",
+          "male": "0"
+        },
+        {
+          "height": "86.36",
+          "weight": "10.489315",
+          "age": "6.5",
+          "male": "0"
+        },
+        {
+          "height": "161.29",
+          "weight": "48.987936",
+          "age": "39",
+          "male": "1"
+        },
+        {
+          "height": "156.21",
+          "weight": "42.7226965",
+          "age": "29",
+          "male": "0"
+        },
+        {
+          "height": "129.54",
+          "weight": "23.586784",
+          "age": "13",
+          "male": "1"
+        },
+        {
+          "height": "109.22",
+          "weight": "15.989118",
+          "age": "7",
+          "male": "0"
+        },
+        {
+          "height": "146.4",
+          "weight": "35.493574",
+          "age": "56",
+          "male": "1"
+        },
+        {
+          "height": "148.59",
+          "weight": "37.9032815",
+          "age": "45",
+          "male": "0"
+        },
+        {
+          "height": "147.32",
+          "weight": "35.4652245",
+          "age": "19",
+          "male": "0"
+        },
+        {
+          "height": "137.16",
+          "weight": "27.328918",
+          "age": "17",
+          "male": "1"
+        },
+        {
+          "height": "125.73",
+          "weight": "22.6796",
+          "age": "16",
+          "male": "0"
+        },
+        {
+          "height": "114.3",
+          "weight": "17.860185",
+          "age": "11",
+          "male": "1"
+        },
+        {
+          "height": "147.955",
+          "weight": "40.312989",
+          "age": "29",
+          "male": "1"
+        },
+        {
+          "height": "161.925",
+          "weight": "55.111428",
+          "age": "30",
+          "male": "1"
+        },
+        {
+          "height": "146.05",
+          "weight": "37.5063885",
+          "age": "24",
+          "male": "0"
+        },
+        {
+          "height": "146.05",
+          "weight": "38.498621",
+          "age": "35",
+          "male": "0"
+        },
+        {
+          "height": "152.7048",
+          "weight": "46.606578",
+          "age": "33",
+          "male": "0"
+        },
+        {
+          "height": "142.875",
+          "weight": "38.838815",
+          "age": "27",
+          "male": "0"
+        },
+        {
+          "height": "142.875",
+          "weight": "35.5786225",
+          "age": "32",
+          "male": "0"
+        },
+        {
+          "height": "147.955",
+          "weight": "47.400364",
+          "age": "36",
+          "male": "0"
+        },
+        {
+          "height": "160.655",
+          "weight": "47.8823055",
+          "age": "24",
+          "male": "1"
+        },
+        {
+          "height": "151.765",
+          "weight": "49.4131785",
+          "age": "30",
+          "male": "1"
+        },
+        {
+          "height": "162.8648",
+          "weight": "49.384829",
+          "age": "24",
+          "male": "1"
+        },
+        {
+          "height": "171.45",
+          "weight": "56.5572525",
+          "age": "52",
+          "male": "1"
+        },
+        {
+          "height": "147.32",
+          "weight": "39.12231",
+          "age": "42",
+          "male": "0"
+        },
+        {
+          "height": "147.955",
+          "weight": "49.89512",
+          "age": "19",
+          "male": "0"
+        },
+        {
+          "height": "144.78",
+          "weight": "28.803092",
+          "age": "17",
+          "male": "0"
+        },
+        {
+          "height": "121.92",
+          "weight": "20.41164",
+          "age": "8",
+          "male": "1"
+        },
+        {
+          "height": "128.905",
+          "weight": "23.359988",
+          "age": "12",
+          "male": "0"
+        },
+        {
+          "height": "97.79",
+          "weight": "13.267566",
+          "age": "5",
+          "male": "0"
+        },
+        {
+          "height": "154.305",
+          "weight": "41.2485225",
+          "age": "55",
+          "male": "1"
+        },
+        {
+          "height": "143.51",
+          "weight": "38.55532",
+          "age": "43",
+          "male": "0"
+        },
+        {
+          "height": "146.7",
+          "weight": "42.4",
+          "age": "20",
+          "male": "1"
+        },
+        {
+          "height": "157.48",
+          "weight": "44.6504625",
+          "age": "18",
+          "male": "1"
+        },
+        {
+          "height": "127",
+          "weight": "22.0105518",
+          "age": "13",
+          "male": "1"
+        },
+        {
+          "height": "110.49",
+          "weight": "15.422128",
+          "age": "9",
+          "male": "0"
+        },
+        {
+          "height": "97.79",
+          "weight": "12.757275",
+          "age": "5",
+          "male": "0"
+        },
+        {
+          "height": "165.735",
+          "weight": "58.5984165",
+          "age": "42",
+          "male": "1"
+        },
+        {
+          "height": "152.4",
+          "weight": "46.719976",
+          "age": "44",
+          "male": "0"
+        },
+        {
+          "height": "141.605",
+          "weight": "44.22522",
+          "age": "60",
+          "male": "0"
+        },
+        {
+          "height": "158.8",
+          "weight": "50.9",
+          "age": "20",
+          "male": "0"
+        },
+        {
+          "height": "155.575",
+          "weight": "54.317642",
+          "age": "37",
+          "male": "0"
+        },
+        {
+          "height": "164.465",
+          "weight": "45.8978405",
+          "age": "50",
+          "male": "1"
+        },
+        {
+          "height": "151.765",
+          "weight": "48.024053",
+          "age": "50",
+          "male": "0"
+        },
+        {
+          "height": "161.29",
+          "weight": "52.219779",
+          "age": "31",
+          "male": "1"
+        },
+        {
+          "height": "154.305",
+          "weight": "47.62716",
+          "age": "25",
+          "male": "0"
+        },
+        {
+          "height": "145.415",
+          "weight": "45.642695",
+          "age": "23",
+          "male": "0"
+        },
+        {
+          "height": "145.415",
+          "weight": "42.410852",
+          "age": "52",
+          "male": "0"
+        },
+        {
+          "height": "152.4",
+          "weight": "36.4858065",
+          "age": "79.3",
+          "male": "1"
+        },
+        {
+          "height": "163.83",
+          "weight": "55.9335635",
+          "age": "35",
+          "male": "1"
+        },
+        {
+          "height": "144.145",
+          "weight": "37.194544",
+          "age": "27",
+          "male": "0"
+        },
+        {
+          "height": "129.54",
+          "weight": "24.550667",
+          "age": "13",
+          "male": "1"
+        },
+        {
+          "height": "129.54",
+          "weight": "25.627948",
+          "age": "14",
+          "male": "0"
+        },
+        {
+          "height": "153.67",
+          "weight": "48.307548",
+          "age": "38",
+          "male": "1"
+        },
+        {
+          "height": "142.875",
+          "weight": "37.3362915",
+          "age": "39",
+          "male": "0"
+        },
+        {
+          "height": "146.05",
+          "weight": "29.596878",
+          "age": "12",
+          "male": "0"
+        },
+        {
+          "height": "167.005",
+          "weight": "47.173568",
+          "age": "30",
+          "male": "1"
+        },
+        {
+          "height": "158.4198",
+          "weight": "47.286966",
+          "age": "24",
+          "male": "0"
+        },
+        {
+          "height": "91.44",
+          "weight": "12.927372",
+          "age": "0.599999999999909",
+          "male": "1"
+        },
+        {
+          "height": "165.735",
+          "weight": "57.549485",
+          "age": "51",
+          "male": "1"
+        },
+        {
+          "height": "149.86",
+          "weight": "37.931631",
+          "age": "46",
+          "male": "0"
+        },
+        {
+          "height": "147.955",
+          "weight": "41.900561",
+          "age": "17",
+          "male": "0"
+        },
+        {
+          "height": "137.795",
+          "weight": "27.5840635",
+          "age": "12",
+          "male": "0"
+        },
+        {
+          "height": "154.94",
+          "weight": "47.2019175",
+          "age": "22",
+          "male": "0"
+        },
+        {
+          "height": "160.9598",
+          "weight": "43.204638",
+          "age": "29",
+          "male": "1"
+        },
+        {
+          "height": "161.925",
+          "weight": "50.2636635",
+          "age": "38",
+          "male": "1"
+        },
+        {
+          "height": "147.955",
+          "weight": "39.3774555",
+          "age": "30",
+          "male": "0"
+        },
+        {
+          "height": "113.665",
+          "weight": "17.463292",
+          "age": "6",
+          "male": "1"
+        },
+        {
+          "height": "159.385",
+          "weight": "50.689",
+          "age": "45",
+          "male": "1"
+        },
+        {
+          "height": "148.59",
+          "weight": "39.4341545",
+          "age": "47",
+          "male": "0"
+        },
+        {
+          "height": "136.525",
+          "weight": "36.28736",
+          "age": "79",
+          "male": "0"
+        },
+        {
+          "height": "158.115",
+          "weight": "46.266384",
+          "age": "45",
+          "male": "1"
+        },
+        {
+          "height": "144.78",
+          "weight": "42.2691045",
+          "age": "54",
+          "male": "0"
+        },
+        {
+          "height": "156.845",
+          "weight": "47.62716",
+          "age": "31",
+          "male": "1"
+        },
+        {
+          "height": "179.07",
+          "weight": "55.7067675",
+          "age": "23",
+          "male": "1"
+        },
+        {
+          "height": "118.745",
+          "weight": "18.824068",
+          "age": "9",
+          "male": "0"
+        },
+        {
+          "height": "170.18",
+          "weight": "48.5626935",
+          "age": "41",
+          "male": "1"
+        },
+        {
+          "height": "146.05",
+          "weight": "42.807745",
+          "age": "23",
+          "male": "0"
+        },
+        {
+          "height": "147.32",
+          "weight": "35.0683315",
+          "age": "36",
+          "male": "0"
+        },
+        {
+          "height": "113.03",
+          "weight": "17.8885345",
+          "age": "5",
+          "male": "1"
+        },
+        {
+          "height": "162.56",
+          "weight": "56.755699",
+          "age": "30",
+          "male": "0"
+        },
+        {
+          "height": "133.985",
+          "weight": "27.442316",
+          "age": "12",
+          "male": "1"
+        },
+        {
+          "height": "152.4",
+          "weight": "51.255896",
+          "age": "34",
+          "male": "0"
+        },
+        {
+          "height": "160.02",
+          "weight": "47.230267",
+          "age": "44",
+          "male": "1"
+        },
+        {
+          "height": "149.86",
+          "weight": "40.936678",
+          "age": "43",
+          "male": "0"
+        },
+        {
+          "height": "142.875",
+          "weight": "32.715323",
+          "age": "73.3",
+          "male": "0"
+        },
+        {
+          "height": "167.005",
+          "weight": "57.0675435",
+          "age": "38",
+          "male": "1"
+        },
+        {
+          "height": "159.385",
+          "weight": "42.977842",
+          "age": "43",
+          "male": "1"
+        },
+        {
+          "height": "154.94",
+          "weight": "39.9444455",
+          "age": "33",
+          "male": "0"
+        },
+        {
+          "height": "148.59",
+          "weight": "32.4601775",
+          "age": "16",
+          "male": "0"
+        },
+        {
+          "height": "111.125",
+          "weight": "17.123098",
+          "age": "11",
+          "male": "1"
+        },
+        {
+          "height": "111.76",
+          "weight": "16.499409",
+          "age": "6",
+          "male": "1"
+        },
+        {
+          "height": "162.56",
+          "weight": "45.9545395",
+          "age": "35",
+          "male": "1"
+        },
+        {
+          "height": "152.4",
+          "weight": "41.106775",
+          "age": "29",
+          "male": "0"
+        },
+        {
+          "height": "124.46",
+          "weight": "18.257078",
+          "age": "12",
+          "male": "0"
+        },
+        {
+          "height": "111.76",
+          "weight": "15.081934",
+          "age": "9",
+          "male": "1"
+        },
+        {
+          "height": "86.36",
+          "weight": "11.4815475",
+          "age": "7.59999999999991",
+          "male": "1"
+        },
+        {
+          "height": "170.18",
+          "weight": "47.5988105",
+          "age": "58",
+          "male": "1"
+        },
+        {
+          "height": "146.05",
+          "weight": "37.5063885",
+          "age": "53",
+          "male": "0"
+        },
+        {
+          "height": "159.385",
+          "weight": "45.019006",
+          "age": "51",
+          "male": "1"
+        },
+        {
+          "height": "151.13",
+          "weight": "42.2691045",
+          "age": "48",
+          "male": "0"
+        },
+        {
+          "height": "160.655",
+          "weight": "54.8562825",
+          "age": "29",
+          "male": "1"
+        },
+        {
+          "height": "169.545",
+          "weight": "53.523856",
+          "age": "41",
+          "male": "1"
+        },
+        {
+          "height": "158.75",
+          "weight": "52.1914295",
+          "age": "81.75",
+          "male": "1"
+        },
+        {
+          "height": "74.295",
+          "weight": "9.752228",
+          "age": "1",
+          "male": "1"
+        },
+        {
+          "height": "149.86",
+          "weight": "42.410852",
+          "age": "35",
+          "male": "0"
+        },
+        {
+          "height": "153.035",
+          "weight": "49.5832755",
+          "age": "46",
+          "male": "0"
+        },
+        {
+          "height": "96.52",
+          "weight": "13.097469",
+          "age": "5",
+          "male": "1"
+        }],
+      "colors": ["#4575b4", "#ffffbf", "#a50026"]
+    }
+  },
+  {
+    "target": "#series-chart",
+    "widgetType": "series-chart",
+    "title": "New Hires 2022",
+    "gridArea": "14/1/16/6",
+    "chart": {
+      "data": [
+        {
+          "Expt": "1",
+          "Run": "1",
+          "Speed": "850"
+        },
+        {
+          "Expt": "1",
+          "Run": "2",
+          "Speed": "740"
+        },
+        {
+          "Expt": "1",
+          "Run": "3",
+          "Speed": "900"
+        },
+        {
+          "Expt": "1",
+          "Run": "4",
+          "Speed": "1070"
+        },
+        {
+          "Expt": "1",
+          "Run": "5",
+          "Speed": "930"
+        },
+        {
+          "Expt": "1",
+          "Run": "6",
+          "Speed": "850"
+        },
+        {
+          "Expt": "1",
+          "Run": "7",
+          "Speed": "950"
+        },
+        {
+          "Expt": "1",
+          "Run": "8",
+          "Speed": "980"
+        },
+        {
+          "Expt": "1",
+          "Run": "9",
+          "Speed": "980"
+        },
+        {
+          "Expt": "1",
+          "Run": "10",
+          "Speed": "880"
+        },
+        {
+          "Expt": "1",
+          "Run": "11",
+          "Speed": "1000"
+        },
+        {
+          "Expt": "1",
+          "Run": "12",
+          "Speed": "980"
+        },
+        {
+          "Expt": "1",
+          "Run": "13",
+          "Speed": "930"
+        },
+        {
+          "Expt": "1",
+          "Run": "14",
+          "Speed": "650"
+        },
+        {
+          "Expt": "1",
+          "Run": "15",
+          "Speed": "760"
+        },
+        {
+          "Expt": "1",
+          "Run": "16",
+          "Speed": "810"
+        },
+        {
+          "Expt": "1",
+          "Run": "17",
+          "Speed": "1000"
+        },
+        {
+          "Expt": "1",
+          "Run": "18",
+          "Speed": "1000"
+        },
+        {
+          "Expt": "1",
+          "Run": "19",
+          "Speed": "960"
+        },
+        {
+          "Expt": "1",
+          "Run": "20",
+          "Speed": "960"
+        },
+        {
+          "Expt": "2",
+          "Run": "1",
+          "Speed": "960"
+        },
+        {
+          "Expt": "2",
+          "Run": "2",
+          "Speed": "940"
+        },
+        {
+          "Expt": "2",
+          "Run": "3",
+          "Speed": "960"
+        },
+        {
+          "Expt": "2",
+          "Run": "4",
+          "Speed": "940"
+        },
+        {
+          "Expt": "2",
+          "Run": "5",
+          "Speed": "880"
+        },
+        {
+          "Expt": "2",
+          "Run": "6",
+          "Speed": "800"
+        },
+        {
+          "Expt": "2",
+          "Run": "7",
+          "Speed": "850"
+        },
+        {
+          "Expt": "2",
+          "Run": "8",
+          "Speed": "880"
+        },
+        {
+          "Expt": "2",
+          "Run": "9",
+          "Speed": "900"
+        },
+        {
+          "Expt": "2",
+          "Run": "10",
+          "Speed": "840"
+        },
+        {
+          "Expt": "2",
+          "Run": "11",
+          "Speed": "830"
+        },
+        {
+          "Expt": "2",
+          "Run": "12",
+          "Speed": "790"
+        },
+        {
+          "Expt": "2",
+          "Run": "13",
+          "Speed": "810"
+        },
+        {
+          "Expt": "2",
+          "Run": "14",
+          "Speed": "880"
+        },
+        {
+          "Expt": "2",
+          "Run": "15",
+          "Speed": "880"
+        },
+        {
+          "Expt": "2",
+          "Run": "16",
+          "Speed": "830"
+        },
+        {
+          "Expt": "2",
+          "Run": "17",
+          "Speed": "800"
+        },
+        {
+          "Expt": "2",
+          "Run": "18",
+          "Speed": "790"
+        },
+        {
+          "Expt": "2",
+          "Run": "19",
+          "Speed": "760"
+        },
+        {
+          "Expt": "2",
+          "Run": "20",
+          "Speed": "800"
+        },
+        {
+          "Expt": "3",
+          "Run": "1",
+          "Speed": "880"
+        },
+        {
+          "Expt": "3",
+          "Run": "2",
+          "Speed": "880"
+        },
+        {
+          "Expt": "3",
+          "Run": "3",
+          "Speed": "880"
+        },
+        {
+          "Expt": "3",
+          "Run": "4",
+          "Speed": "860"
+        },
+        {
+          "Expt": "3",
+          "Run": "5",
+          "Speed": "720"
+        },
+        {
+          "Expt": "3",
+          "Run": "6",
+          "Speed": "720"
+        },
+        {
+          "Expt": "3",
+          "Run": "7",
+          "Speed": "620"
+        },
+        {
+          "Expt": "3",
+          "Run": "8",
+          "Speed": "860"
+        },
+        {
+          "Expt": "3",
+          "Run": "9",
+          "Speed": "970"
+        },
+        {
+          "Expt": "3",
+          "Run": "10",
+          "Speed": "950"
+        },
+        {
+          "Expt": "3",
+          "Run": "11",
+          "Speed": "880"
+        },
+        {
+          "Expt": "3",
+          "Run": "12",
+          "Speed": "910"
+        },
+        {
+          "Expt": "3",
+          "Run": "13",
+          "Speed": "850"
+        },
+        {
+          "Expt": "3",
+          "Run": "14",
+          "Speed": "870"
+        },
+        {
+          "Expt": "3",
+          "Run": "15",
+          "Speed": "840"
+        },
+        {
+          "Expt": "3",
+          "Run": "16",
+          "Speed": "840"
+        },
+        {
+          "Expt": "3",
+          "Run": "17",
+          "Speed": "850"
+        },
+        {
+          "Expt": "3",
+          "Run": "18",
+          "Speed": "840"
+        },
+        {
+          "Expt": "3",
+          "Run": "19",
+          "Speed": "840"
+        },
+        {
+          "Expt": "3",
+          "Run": "20",
+          "Speed": "840"
+        },
+        {
+          "Expt": "4",
+          "Run": "1",
+          "Speed": "890"
+        },
+        {
+          "Expt": "4",
+          "Run": "2",
+          "Speed": "810"
+        },
+        {
+          "Expt": "4",
+          "Run": "3",
+          "Speed": "810"
+        },
+        {
+          "Expt": "4",
+          "Run": "4",
+          "Speed": "820"
+        },
+        {
+          "Expt": "4",
+          "Run": "5",
+          "Speed": "800"
+        },
+        {
+          "Expt": "4",
+          "Run": "6",
+          "Speed": "770"
+        },
+        {
+          "Expt": "4",
+          "Run": "7",
+          "Speed": "760"
+        },
+        {
+          "Expt": "4",
+          "Run": "8",
+          "Speed": "740"
+        },
+        {
+          "Expt": "4",
+          "Run": "9",
+          "Speed": "750"
+        },
+        {
+          "Expt": "4",
+          "Run": "10",
+          "Speed": "760"
+        },
+        {
+          "Expt": "4",
+          "Run": "11",
+          "Speed": "910"
+        },
+        {
+          "Expt": "4",
+          "Run": "12",
+          "Speed": "920"
+        },
+        {
+          "Expt": "4",
+          "Run": "13",
+          "Speed": "890"
+        },
+        {
+          "Expt": "4",
+          "Run": "14",
+          "Speed": "860"
+        },
+        {
+          "Expt": "4",
+          "Run": "15",
+          "Speed": "880"
+        },
+        {
+          "Expt": "4",
+          "Run": "16",
+          "Speed": "720"
+        },
+        {
+          "Expt": "4",
+          "Run": "17",
+          "Speed": "840"
+        },
+        {
+          "Expt": "4",
+          "Run": "18",
+          "Speed": "850"
+        },
+        {
+          "Expt": "4",
+          "Run": "19",
+          "Speed": "850"
+        },
+        {
+          "Expt": "4",
+          "Run": "20",
+          "Speed": "780"
+        },
+        {
+          "Expt": "5",
+          "Run": "1",
+          "Speed": "890"
+        },
+        {
+          "Expt": "5",
+          "Run": "2",
+          "Speed": "840"
+        },
+        {
+          "Expt": "5",
+          "Run": "3",
+          "Speed": "780"
+        },
+        {
+          "Expt": "5",
+          "Run": "4",
+          "Speed": "810"
+        },
+        {
+          "Expt": "5",
+          "Run": "5",
+          "Speed": "760"
+        },
+        {
+          "Expt": "5",
+          "Run": "6",
+          "Speed": "810"
+        },
+        {
+          "Expt": "5",
+          "Run": "7",
+          "Speed": "790"
+        },
+        {
+          "Expt": "5",
+          "Run": "8",
+          "Speed": "810"
+        },
+        {
+          "Expt": "5",
+          "Run": "9",
+          "Speed": "820"
+        },
+        {
+          "Expt": "5",
+          "Run": "10",
+          "Speed": "850"
+        },
+        {
+          "Expt": "5",
+          "Run": "11",
+          "Speed": "870"
+        },
+        {
+          "Expt": "5",
+          "Run": "12",
+          "Speed": "870"
+        },
+        {
+          "Expt": "5",
+          "Run": "13",
+          "Speed": "810"
+        },
+        {
+          "Expt": "5",
+          "Run": "14",
+          "Speed": "740"
+        },
+        {
+          "Expt": "5",
+          "Run": "15",
+          "Speed": "810"
+        },
+        {
+          "Expt": "5",
+          "Run": "16",
+          "Speed": "940"
+        },
+        {
+          "Expt": "5",
+          "Run": "17",
+          "Speed": "950"
+        },
+        {
+          "Expt": "5",
+          "Run": "18",
+          "Speed": "800"
+        },
+        {
+          "Expt": "5",
+          "Run": "19",
+          "Speed": "810"
+        },
+        {
+          "Expt": "5",
+          "Run": "20",
+          "Speed": "870"
+        }
+      ],
+      "colors": ["red", "green", "blue", "yellow"]
+    }
+  },
+  {
+    "target": "#composite-chart",
+    "widgetType": "composite-chart",
+    "title": "composite",
+    "gridArea": "14/6/16/11",
+    "chart": {
+      "data": [
+        [
+          {
+            "Expt": "1",
+            "Run": "1",
+            "Speed": "850"
+          },
+          {
+            "Expt": "1",
+            "Run": "2",
+            "Speed": "740"
+          },
+          {
+            "Expt": "1",
+            "Run": "3",
+            "Speed": "900"
+          },
+          {
+            "Expt": "1",
+            "Run": "4",
+            "Speed": "1070"
+          },
+          {
+            "Expt": "1",
+            "Run": "5",
+            "Speed": "930"
+          },
+          {
+            "Expt": "1",
+            "Run": "6",
+            "Speed": "850"
+          },
+          {
+            "Expt": "1",
+            "Run": "7",
+            "Speed": "950"
+          },
+          {
+            "Expt": "1",
+            "Run": "8",
+            "Speed": "980"
+          },
+          {
+            "Expt": "1",
+            "Run": "9",
+            "Speed": "980"
+          },
+          {
+            "Expt": "1",
+            "Run": "10",
+            "Speed": "880"
+          },
+          {
+            "Expt": "1",
+            "Run": "11",
+            "Speed": "1000"
+          },
+          {
+            "Expt": "1",
+            "Run": "12",
+            "Speed": "980"
+          },
+          {
+            "Expt": "1",
+            "Run": "13",
+            "Speed": "930"
+          },
+          {
+            "Expt": "1",
+            "Run": "14",
+            "Speed": "650"
+          },
+          {
+            "Expt": "1",
+            "Run": "15",
+            "Speed": "760"
+          },
+          {
+            "Expt": "1",
+            "Run": "16",
+            "Speed": "810"
+          },
+          {
+            "Expt": "1",
+            "Run": "17",
+            "Speed": "1000"
+          },
+          {
+            "Expt": "1",
+            "Run": "18",
+            "Speed": "1000"
+          },
+          {
+            "Expt": "1",
+            "Run": "19",
+            "Speed": "960"
+          },
+          {
+            "Expt": "1",
+            "Run": "20",
+            "Speed": "960"
+          },
+          {
+            "Expt": "2",
+            "Run": "1",
+            "Speed": "960"
+          },
+          {
+            "Expt": "2",
+            "Run": "2",
+            "Speed": "940"
+          },
+          {
+            "Expt": "2",
+            "Run": "3",
+            "Speed": "960"
+          },
+          {
+            "Expt": "2",
+            "Run": "4",
+            "Speed": "940"
+          },
+          {
+            "Expt": "2",
+            "Run": "5",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "6",
+            "Speed": "800"
+          },
+          {
+            "Expt": "2",
+            "Run": "7",
+            "Speed": "850"
+          },
+          {
+            "Expt": "2",
+            "Run": "8",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "9",
+            "Speed": "900"
+          },
+          {
+            "Expt": "2",
+            "Run": "10",
+            "Speed": "840"
+          },
+          {
+            "Expt": "2",
+            "Run": "11",
+            "Speed": "830"
+          },
+          {
+            "Expt": "2",
+            "Run": "12",
+            "Speed": "790"
+          },
+          {
+            "Expt": "2",
+            "Run": "13",
+            "Speed": "810"
+          },
+          {
+            "Expt": "2",
+            "Run": "14",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "15",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "16",
+            "Speed": "830"
+          },
+          {
+            "Expt": "2",
+            "Run": "17",
+            "Speed": "800"
+          },
+          {
+            "Expt": "2",
+            "Run": "18",
+            "Speed": "790"
+          },
+          {
+            "Expt": "2",
+            "Run": "19",
+            "Speed": "760"
+          },
+          {
+            "Expt": "2",
+            "Run": "20",
+            "Speed": "800"
+          },
+          {
+            "Expt": "3",
+            "Run": "1",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "2",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "3",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "4",
+            "Speed": "860"
+          },
+          {
+            "Expt": "3",
+            "Run": "5",
+            "Speed": "720"
+          },
+          {
+            "Expt": "3",
+            "Run": "6",
+            "Speed": "720"
+          },
+          {
+            "Expt": "3",
+            "Run": "7",
+            "Speed": "620"
+          },
+          {
+            "Expt": "3",
+            "Run": "8",
+            "Speed": "860"
+          },
+          {
+            "Expt": "3",
+            "Run": "9",
+            "Speed": "970"
+          },
+          {
+            "Expt": "3",
+            "Run": "10",
+            "Speed": "950"
+          },
+          {
+            "Expt": "3",
+            "Run": "11",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "12",
+            "Speed": "910"
+          },
+          {
+            "Expt": "3",
+            "Run": "13",
+            "Speed": "850"
+          },
+          {
+            "Expt": "3",
+            "Run": "14",
+            "Speed": "870"
+          },
+          {
+            "Expt": "3",
+            "Run": "15",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "16",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "17",
+            "Speed": "850"
+          },
+          {
+            "Expt": "3",
+            "Run": "18",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "19",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "20",
+            "Speed": "840"
+          },
+          {
+            "Expt": "4",
+            "Run": "1",
+            "Speed": "890"
+          },
+          {
+            "Expt": "4",
+            "Run": "2",
+            "Speed": "810"
+          },
+          {
+            "Expt": "4",
+            "Run": "3",
+            "Speed": "810"
+          },
+          {
+            "Expt": "4",
+            "Run": "4",
+            "Speed": "820"
+          },
+          {
+            "Expt": "4",
+            "Run": "5",
+            "Speed": "800"
+          },
+          {
+            "Expt": "4",
+            "Run": "6",
+            "Speed": "770"
+          },
+          {
+            "Expt": "4",
+            "Run": "7",
+            "Speed": "760"
+          },
+          {
+            "Expt": "4",
+            "Run": "8",
+            "Speed": "740"
+          },
+          {
+            "Expt": "4",
+            "Run": "9",
+            "Speed": "750"
+          },
+          {
+            "Expt": "4",
+            "Run": "10",
+            "Speed": "760"
+          },
+          {
+            "Expt": "4",
+            "Run": "11",
+            "Speed": "910"
+          },
+          {
+            "Expt": "4",
+            "Run": "12",
+            "Speed": "920"
+          },
+          {
+            "Expt": "4",
+            "Run": "13",
+            "Speed": "890"
+          },
+          {
+            "Expt": "4",
+            "Run": "14",
+            "Speed": "860"
+          },
+          {
+            "Expt": "4",
+            "Run": "15",
+            "Speed": "880"
+          },
+          {
+            "Expt": "4",
+            "Run": "16",
+            "Speed": "720"
+          },
+          {
+            "Expt": "4",
+            "Run": "17",
+            "Speed": "840"
+          },
+          {
+            "Expt": "4",
+            "Run": "18",
+            "Speed": "850"
+          },
+          {
+            "Expt": "4",
+            "Run": "19",
+            "Speed": "850"
+          },
+          {
+            "Expt": "4",
+            "Run": "20",
+            "Speed": "780"
+          },
+          {
+            "Expt": "5",
+            "Run": "1",
+            "Speed": "890"
+          },
+          {
+            "Expt": "5",
+            "Run": "2",
+            "Speed": "840"
+          },
+          {
+            "Expt": "5",
+            "Run": "3",
+            "Speed": "780"
+          },
+          {
+            "Expt": "5",
+            "Run": "4",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "5",
+            "Speed": "760"
+          },
+          {
+            "Expt": "5",
+            "Run": "6",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "7",
+            "Speed": "790"
+          },
+          {
+            "Expt": "5",
+            "Run": "8",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "9",
+            "Speed": "820"
+          },
+          {
+            "Expt": "5",
+            "Run": "10",
+            "Speed": "850"
+          },
+          {
+            "Expt": "5",
+            "Run": "11",
+            "Speed": "870"
+          },
+          {
+            "Expt": "5",
+            "Run": "12",
+            "Speed": "870"
+          },
+          {
+            "Expt": "5",
+            "Run": "13",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "14",
+            "Speed": "740"
+          },
+          {
+            "Expt": "5",
+            "Run": "15",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "16",
+            "Speed": "940"
+          },
+          {
+            "Expt": "5",
+            "Run": "17",
+            "Speed": "950"
+          },
+          {
+            "Expt": "5",
+            "Run": "18",
+            "Speed": "800"
+          },
+          {
+            "Expt": "5",
+            "Run": "19",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "20",
+            "Speed": "870"
+          }
+        ],
+        [
+          {
+            "Expt": "1",
+            "Run": "1",
+            "Speed": "850"
+          },
+          {
+            "Expt": "1",
+            "Run": "2",
+            "Speed": "740"
+          },
+          {
+            "Expt": "1",
+            "Run": "3",
+            "Speed": "900"
+          },
+          {
+            "Expt": "1",
+            "Run": "4",
+            "Speed": "1070"
+          },
+          {
+            "Expt": "1",
+            "Run": "5",
+            "Speed": "930"
+          },
+          {
+            "Expt": "1",
+            "Run": "6",
+            "Speed": "850"
+          },
+          {
+            "Expt": "1",
+            "Run": "7",
+            "Speed": "950"
+          },
+          {
+            "Expt": "1",
+            "Run": "8",
+            "Speed": "980"
+          },
+          {
+            "Expt": "1",
+            "Run": "9",
+            "Speed": "980"
+          },
+          {
+            "Expt": "1",
+            "Run": "10",
+            "Speed": "880"
+          },
+          {
+            "Expt": "1",
+            "Run": "11",
+            "Speed": "1000"
+          },
+          {
+            "Expt": "1",
+            "Run": "12",
+            "Speed": "980"
+          },
+          {
+            "Expt": "1",
+            "Run": "13",
+            "Speed": "930"
+          },
+          {
+            "Expt": "1",
+            "Run": "14",
+            "Speed": "650"
+          },
+          {
+            "Expt": "1",
+            "Run": "15",
+            "Speed": "760"
+          },
+          {
+            "Expt": "1",
+            "Run": "16",
+            "Speed": "810"
+          },
+          {
+            "Expt": "1",
+            "Run": "17",
+            "Speed": "1000"
+          },
+          {
+            "Expt": "1",
+            "Run": "18",
+            "Speed": "1000"
+          },
+          {
+            "Expt": "1",
+            "Run": "19",
+            "Speed": "960"
+          },
+          {
+            "Expt": "1",
+            "Run": "20",
+            "Speed": "960"
+          },
+          {
+            "Expt": "2",
+            "Run": "1",
+            "Speed": "960"
+          },
+          {
+            "Expt": "2",
+            "Run": "2",
+            "Speed": "940"
+          },
+          {
+            "Expt": "2",
+            "Run": "3",
+            "Speed": "960"
+          },
+          {
+            "Expt": "2",
+            "Run": "4",
+            "Speed": "940"
+          },
+          {
+            "Expt": "2",
+            "Run": "5",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "6",
+            "Speed": "800"
+          },
+          {
+            "Expt": "2",
+            "Run": "7",
+            "Speed": "850"
+          },
+          {
+            "Expt": "2",
+            "Run": "8",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "9",
+            "Speed": "900"
+          },
+          {
+            "Expt": "2",
+            "Run": "10",
+            "Speed": "840"
+          },
+          {
+            "Expt": "2",
+            "Run": "11",
+            "Speed": "830"
+          },
+          {
+            "Expt": "2",
+            "Run": "12",
+            "Speed": "790"
+          },
+          {
+            "Expt": "2",
+            "Run": "13",
+            "Speed": "810"
+          },
+          {
+            "Expt": "2",
+            "Run": "14",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "15",
+            "Speed": "880"
+          },
+          {
+            "Expt": "2",
+            "Run": "16",
+            "Speed": "830"
+          },
+          {
+            "Expt": "2",
+            "Run": "17",
+            "Speed": "800"
+          },
+          {
+            "Expt": "2",
+            "Run": "18",
+            "Speed": "790"
+          },
+          {
+            "Expt": "2",
+            "Run": "19",
+            "Speed": "760"
+          },
+          {
+            "Expt": "2",
+            "Run": "20",
+            "Speed": "800"
+          },
+          {
+            "Expt": "3",
+            "Run": "1",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "2",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "3",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "4",
+            "Speed": "860"
+          },
+          {
+            "Expt": "3",
+            "Run": "5",
+            "Speed": "720"
+          },
+          {
+            "Expt": "3",
+            "Run": "6",
+            "Speed": "720"
+          },
+          {
+            "Expt": "3",
+            "Run": "7",
+            "Speed": "620"
+          },
+          {
+            "Expt": "3",
+            "Run": "8",
+            "Speed": "860"
+          },
+          {
+            "Expt": "3",
+            "Run": "9",
+            "Speed": "970"
+          },
+          {
+            "Expt": "3",
+            "Run": "10",
+            "Speed": "950"
+          },
+          {
+            "Expt": "3",
+            "Run": "11",
+            "Speed": "880"
+          },
+          {
+            "Expt": "3",
+            "Run": "12",
+            "Speed": "910"
+          },
+          {
+            "Expt": "3",
+            "Run": "13",
+            "Speed": "850"
+          },
+          {
+            "Expt": "3",
+            "Run": "14",
+            "Speed": "870"
+          },
+          {
+            "Expt": "3",
+            "Run": "15",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "16",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "17",
+            "Speed": "850"
+          },
+          {
+            "Expt": "3",
+            "Run": "18",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "19",
+            "Speed": "840"
+          },
+          {
+            "Expt": "3",
+            "Run": "20",
+            "Speed": "840"
+          },
+          {
+            "Expt": "4",
+            "Run": "1",
+            "Speed": "890"
+          },
+          {
+            "Expt": "4",
+            "Run": "2",
+            "Speed": "810"
+          },
+          {
+            "Expt": "4",
+            "Run": "3",
+            "Speed": "810"
+          },
+          {
+            "Expt": "4",
+            "Run": "4",
+            "Speed": "820"
+          },
+          {
+            "Expt": "4",
+            "Run": "5",
+            "Speed": "800"
+          },
+          {
+            "Expt": "4",
+            "Run": "6",
+            "Speed": "770"
+          },
+          {
+            "Expt": "4",
+            "Run": "7",
+            "Speed": "760"
+          },
+          {
+            "Expt": "4",
+            "Run": "8",
+            "Speed": "740"
+          },
+          {
+            "Expt": "4",
+            "Run": "9",
+            "Speed": "750"
+          },
+          {
+            "Expt": "4",
+            "Run": "10",
+            "Speed": "760"
+          },
+          {
+            "Expt": "4",
+            "Run": "11",
+            "Speed": "910"
+          },
+          {
+            "Expt": "4",
+            "Run": "12",
+            "Speed": "920"
+          },
+          {
+            "Expt": "4",
+            "Run": "13",
+            "Speed": "890"
+          },
+          {
+            "Expt": "4",
+            "Run": "14",
+            "Speed": "860"
+          },
+          {
+            "Expt": "4",
+            "Run": "15",
+            "Speed": "880"
+          },
+          {
+            "Expt": "4",
+            "Run": "16",
+            "Speed": "720"
+          },
+          {
+            "Expt": "4",
+            "Run": "17",
+            "Speed": "840"
+          },
+          {
+            "Expt": "4",
+            "Run": "18",
+            "Speed": "850"
+          },
+          {
+            "Expt": "4",
+            "Run": "19",
+            "Speed": "850"
+          },
+          {
+            "Expt": "4",
+            "Run": "20",
+            "Speed": "780"
+          },
+          {
+            "Expt": "5",
+            "Run": "1",
+            "Speed": "890"
+          },
+          {
+            "Expt": "5",
+            "Run": "2",
+            "Speed": "840"
+          },
+          {
+            "Expt": "5",
+            "Run": "3",
+            "Speed": "780"
+          },
+          {
+            "Expt": "5",
+            "Run": "4",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "5",
+            "Speed": "760"
+          },
+          {
+            "Expt": "5",
+            "Run": "6",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "7",
+            "Speed": "790"
+          },
+          {
+            "Expt": "5",
+            "Run": "8",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "9",
+            "Speed": "820"
+          },
+          {
+            "Expt": "5",
+            "Run": "10",
+            "Speed": "850"
+          },
+          {
+            "Expt": "5",
+            "Run": "11",
+            "Speed": "870"
+          },
+          {
+            "Expt": "5",
+            "Run": "12",
+            "Speed": "870"
+          },
+          {
+            "Expt": "5",
+            "Run": "13",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "14",
+            "Speed": "740"
+          },
+          {
+            "Expt": "5",
+            "Run": "15",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "16",
+            "Speed": "940"
+          },
+          {
+            "Expt": "5",
+            "Run": "17",
+            "Speed": "950"
+          },
+          {
+            "Expt": "5",
+            "Run": "18",
+            "Speed": "800"
+          },
+          {
+            "Expt": "5",
+            "Run": "19",
+            "Speed": "810"
+          },
+          {
+            "Expt": "5",
+            "Run": "20",
+            "Speed": "870"
+          },
+          {
+            "Expt": "6",
+            "Run": "1",
+            "Speed": "990"
+          },
+          {
+            "Expt": "6",
+            "Run": "2",
+            "Speed": "940"
+          },
+          {
+            "Expt": "6",
+            "Run": "3",
+            "Speed": "880"
+          },
+          {
+            "Expt": "6",
+            "Run": "4",
+            "Speed": "910"
+          },
+          {
+            "Expt": "6",
+            "Run": "5",
+            "Speed": "760"
+          },
+          {
+            "Expt": "6",
+            "Run": "6",
+            "Speed": "910"
+          },
+          {
+            "Expt": "6",
+            "Run": "7",
+            "Speed": "890"
+          },
+          {
+            "Expt": "6",
+            "Run": "8",
+            "Speed": "910"
+          },
+          {
+            "Expt": "6",
+            "Run": "9",
+            "Speed": "920"
+          },
+          {
+            "Expt": "6",
+            "Run": "10",
+            "Speed": "950"
+          },
+          {
+            "Expt": "6",
+            "Run": "11",
+            "Speed": "970"
+          },
+          {
+            "Expt": "6",
+            "Run": "12",
+            "Speed": "970"
+          },
+          {
+            "Expt": "6",
+            "Run": "13",
+            "Speed": "910"
+          },
+          {
+            "Expt": "6",
+            "Run": "14",
+            "Speed": "840"
+          },
+          {
+            "Expt": "6",
+            "Run": "15",
+            "Speed": "910"
+          },
+          {
+            "Expt": "6",
+            "Run": "16",
+            "Speed": "1140"
+          },
+          {
+            "Expt": "6",
+            "Run": "17",
+            "Speed": "1150"
+          },
+          {
+            "Expt": "6",
+            "Run": "18",
+            "Speed": "900"
+          },
+          {
+            "Expt": "6",
+            "Run": "19",
+            "Speed": "910"
+          },
+          {
+            "Expt": "6",
+            "Run": "20",
+            "Speed": "970"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "target": "#heat-map",
+    "widgetType": "heat-map",
+    "title": "Attrition - Half Yearly (2022)",
+    "gridArea": "16/1/18/6",
+    "chart": {
+      "data": [
+        {
+          "revenue": 200,
+          "month": 1
+        },
+        {
+          "revenue": 261,
+          "month": 2
+        },
+        {
+          "revenue": 290,
+          "month": 3
+        },
+        {
+          "revenue": 200,
+          "month": 4
+        },
+        {
+          "revenue": 290,
+          "month": 5
+        },
+        {
+          "revenue": 400,
+          "month": 6
+        },
+        {
+          "revenue": 300,
+          "month": 1
+        },
+        {
+          "revenue": 100,
+          "month": 2
+        },
+        {
+          "revenue": 150,
+          "month": 3
+        },
+        {
+          "revenue": 330,
+          "month": 4
+        },
+        {
+          "revenue": 400,
+          "month": 5
+        },
+        {
+          "revenue": 250,
+          "month": 6
+        }
+      ],
+      "colors": ["#17A7FC", "#88B7F7", "#FFC1A0", "#F86624"]
+    }
+  },
+  {
+    "target": "#sunburstchart",
+    "widgetType": "sunburstchart",
+    "title": "Sunburst Chart",
+    "gridArea": "14/11/18/17",
+    "chart": {
+      "data": [
+        {
+          "Run": 1,
+          "Speed": 930,
+          "Expt": 1
+        },
+        {
+          "Run": 2,
+          "Speed": 760,
+          "Expt": 1
+        },
+        {
+          "Run": 3,
+          "Speed": 950,
+          "Expt": 1
+        },
+        {
+          "Run": 4,
+          "Speed": 940,
+          "Expt": 1
+        },
+        {
+          "Run": 5,
+          "Speed": 720,
+          "Expt": 1
+        },
+        {
+          "Run": 6,
+          "Speed": 880,
+          "Expt": 1
+        },
+        {
+          "Run": 7,
+          "Speed": 750,
+          "Expt": 1
+        },
+        {
+          "Run": 8,
+          "Speed": 910,
+          "Expt": 1
+        },
+        {
+          "Run": 9,
+          "Speed": 1050,
+          "Expt": 1
+        },
+        {
+          "Run": 10,
+          "Speed": 900,
+          "Expt": 1
+        },
+        {
+          "Run": 11,
+          "Speed": 920,
+          "Expt": 1
+        },
+        {
+          "Run": 12,
+          "Speed": 850,
+          "Expt": 1
+        },
+        {
+          "Run": 1,
+          "Speed": 930,
+          "Expt": 2
+        },
+        {
+          "Run": 2,
+          "Speed": 760,
+          "Expt": 2
+        },
+        {
+          "Run": 3,
+          "Speed": 950,
+          "Expt": 2
+        },
+        {
+          "Run": 4,
+          "Speed": 940,
+          "Expt": 2
+        },
+        {
+          "Run": 5,
+          "Speed": 720,
+          "Expt": 2
+        },
+        {
+          "Run": 6,
+          "Speed": 880,
+          "Expt": 2
+        },
+        {
+          "Run": 7,
+          "Speed": 750,
+          "Expt": 2
+        },
+        {
+          "Run": 8,
+          "Speed": 910,
+          "Expt": 2
+        },
+        {
+          "Run": 9,
+          "Speed": 1050,
+          "Expt": 2
+        },
+        {
+          "Run": 10,
+          "Speed": 900,
+          "Expt": 2
+        },
+        {
+          "Run": 11,
+          "Speed": 920,
+          "Expt": 2
+        },
+        {
+          "Run": 12,
+          "Speed": 850,
+          "Expt": 2
+        },
+        {
+          "Run": 1,
+          "Speed": 930,
+          "Expt": 3
+        },
+        {
+          "Run": 2,
+          "Speed": 760,
+          "Expt": 3
+        },
+        {
+          "Run": 3,
+          "Speed": 950,
+          "Expt": 3
+        },
+        {
+          "Run": 4,
+          "Speed": 940,
+          "Expt": 3
+        },
+        {
+          "Run": 5,
+          "Speed": 720,
+          "Expt": 3
+        },
+        {
+          "Run": 6,
+          "Speed": 880,
+          "Expt": 3
+        },
+        {
+          "Run": 7,
+          "Speed": 750,
+          "Expt": 3
+        },
+        {
+          "Run": 8,
+          "Speed": 910,
+          "Expt": 3
+        },
+        {
+          "Run": 9,
+          "Speed": 1050,
+          "Expt": 3
+        },
+        {
+          "Run": 10,
+          "Speed": 900,
+          "Expt": 3
+        },
+        {
+          "Run": 11,
+          "Speed": 920,
+          "Expt": 3
+        },
+        {
+          "Run": 12,
+          "Speed": 850,
+          "Expt": 3
+        },
+        {
+          "Run": 40,
+          "Speed": 70,
+          "Expt": 3
+        },
+        {
+          "Run": 54,
+          "Speed": 100,
+          "Expt": 3
+        },
+        {
+          "Run": 60,
+          "Speed": 120,
+          "Expt": 4
+        }
+      ],
+      "colors": ["#4575b4", "#ffffbf", "#a50026"]
+    }
+  }
+]
