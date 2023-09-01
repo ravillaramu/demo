@@ -54,7 +54,7 @@ jobs:
 
           # [Mandatory]
           # The GitHub token automatically generated for the job
-          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JF_GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
 
           # [Optional]
           # If the machine that runs Frogbot has no access to the internat, set the name of a remote repository
