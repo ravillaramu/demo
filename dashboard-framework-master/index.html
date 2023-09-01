@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/dark-blue.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+    <title>Gridsite - Login</title>
+    <style>
+        body {
+            min-height: calc(100vh - 16px);
+            font-family: 'Inter';
+            display: flex;
+            flex-direction: column;
+        }
+
+        #title-bar {
+            padding: 10px;
+        }
+
+        #title {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        #subtitle {
+            margin-top: 5px;
+        }
+
+        #form-container {
+            width: 300px;
+            margin: auto;
+            border-radius: 20px;
+            background-color: #29379e;
+            padding: 20px;
+            color: white;
+        }
+
+        #form-container input {
+            width: calc(100% - 17px);
+            background: transparent;
+            border: 1px solid #fff;
+            padding: 7px;
+            color: #fff;
+            border-radius: 4px;
+            margin-top: 7px;
+        }
+
+        #form-container input:focus-visible {
+            outline: none;
+        }
+
+        #form-container #submitBtn {
+            width: 100%;
+            background-color: #2D46FF;
+            border: 1px solid #2D46FF;
+            cursor: pointer;
+        }
+
+        #form-container #remember {
+            width: auto;
+            margin-left: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .forgot-pass {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-pass a {
+            color: #fff;
+        }
+
+        /* #heading {
+        margin-bottom: 20px;
+    }
+    #title {
+        font-size: 28px;
+    }  
+    input[type=text], input[type=submit] {
+        width: 100%;
+    }
+    input[type=text] {
+        margin-bottom: 20px;
+    }
+    input[type=submit] {
+        margin: 10px 0;
+    }
+    label, a {
+        font-size: 12px;
+        color: #bbb;
+    }
+    a {
+        display: block;
+        margin: auto;
+    } */
+    </style>
+</head>
+
+<body>
+    <script>
+        sessionStorage.clear();
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "100",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "show",
+            "hideMethod": "hide"
+        };
+        function login() {
+            var userNameValue = document.getElementById('username').value;
+            var passwordValue = document.getElementById('password').value;
+            if (userNameValue && passwordValue) {
+                var payload = {
+                    "username": userNameValue,
+                    "password": passwordValue
+                }
+                $.post({
+                    url: 'http://localhost:3000/login',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(payload),
+                    dataType: 'json'
+                }).done(function (res) {
+                    console.log("response", res);
+                    if (res.isUser && res.code == 200) {
+                        sessionStorage.setItem("token", res.token);
+                        var host = location.host;
+                        var redirectURL = "hr.html";
+                        console.log(redirectURL);
+                        location.href = redirectURL;
+                    } else {
+                        toastr.error('Invalid Username/Password');
+                    }
+
+                }).catch(function (e) {
+                    console.log(e);
+                })
+
+            } else if (userNameValue) {
+                toastr.error('Password is Manditory');
+                console.log('Password is Manditory');
+
+            } else if (passwordValue) {
+                toastr.error('Username is Manditory')
+                console.log('Username is Manditory');
+
+            } else {
+                toastr.error('Username and Password is Manditory');
+                console.log('Both Username and Password is Manditory');
+            }
+        }
+
+
+    </script>
+    <div id="title-bar">
+        <div id="logo">
+            <img src="images/logo.png"  alt="logo"/> </div>
+    </div>
+    <div id="form-container">
+        <div id="heading">
+            <h1 id="title">Login</h1>
+            <h3 id="subtitle">Workforce Analytics</h3>
+        </div>
+        <div id="content">
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <br />
+                <input type="text" name="username" class="form-control" id="username" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <br />
+                <input type="password" name="password" id="password" />
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="remember" id="remember" value="remember" />
+                <label for="remember"> Remeber me</label>
+            </div>
+            <input type="submit" name="submitBtn" onclick="login()" id="submitBtn" value="Login" />
+            <div class="forgot-pass">
+                <a href="forget-password">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

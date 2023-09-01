@@ -1,0 +1,726 @@
+{
+    "API_URL": "http://localhost:3000/search",
+    "API_TYPE": "POST",
+    "PAYLOAD_FIELDS": [
+      {
+        "field": "month",
+        "valueFrom": "id",
+        "optional": false
+      },
+      {
+        "field": "year",
+        "valueFrom": "id",
+        "optional": false
+      },
+      {
+        "field": "bu",
+        "valueFrom": "session",
+        "key": "bu",
+        "dataType": "Array",
+        "optional": true
+      },
+      {
+        "field": "gender",
+        "valueFrom": "session",
+        "key": "gender",
+        "dataType": "Array",
+        "optional": true
+      },
+      {
+        "field": "region",
+        "valueFrom": "session",
+        "key": "region",
+        "dataType": "Array",
+        "optional": true
+      },
+      {
+        "field": "organizationUnit",
+        "valueFrom": "session",
+        "key": "organizationUnit",
+        "dataType": "Array",
+        "optional": true
+      },
+      {
+        "field": "newHires",
+        "valueFrom": "session",
+        "key": "newHires",
+        "dataType": "boolean",
+        "optional": true
+      },
+      {
+        "field": "Attrition",
+        "valueFrom": "session",
+        "dataType": "boolean",
+        "key": "Attrition",
+        "optional": true
+      }
+    ],
+    "COMPONENTS": [
+      {
+        "target": "#title-bar",
+        "widgetType": "titlebar",
+        "title": "WORKFORCE ANALYTICS - YTD",
+        "gridArea": "1/1/2/17",
+        "backgroundImage": "",
+        "data": {
+          "filter-count": 64.52,
+          "percentage": 200
+        }
+      },
+      {
+        "target": "#Headcount",
+        "id": "Headcount",
+        "widgetType": "data-count",
+        "title": "Global Count",
+        "datafield": "tileInfo",
+        "gridArea": "2/1/4/3",
+        "lapresponsiveGridarea": "2/1/5/4",
+        "responsiveGridarea": "2/1/9/9",
+        "valueField": "headcount",
+        "ArrowFlagField": "headcountFlag",
+        "backgroundImage": "url('images/Path 21827@2x.PNG')",
+        "data": {
+          "filter-count": 12000,
+          "percentage": 5500000
+        }
+      },
+      {
+        "target": "#newhires",
+        "id": "newhires",
+        "sessionKey": "newHires",
+        "widgetType": "data-count",
+        "title": "New Hires",
+        "gridArea": "2/3/4/5",
+        "lapresponsiveGridarea": "2/4/5/7",
+        "responsiveGridarea": "2/9/9/17",
+        "datafield": "tileInfo",
+        "valueField": "newhires",
+        "ArrowFlagField": "newhiresFlag",
+        "backgroundImage": "url('images/Path 21827@2x.PNG')",
+        "data": {
+          "filter-count": 5000,
+          "percentage": 2230
+        }
+      },
+      {
+        "target": "#Attrition",
+        "id": "Attrition",
+        "sessionKey": "Attrition",
+        "widgetType": "data-count",
+        "title": "Attrition",
+        "gridArea": "4/1/6/3",
+        "lapresponsiveGridarea": "5/1/8/4",
+        "responsiveGridarea": "9/1/17/9",
+        "datafield": "tileInfo",
+        "valueField": "attrition",
+        "ArrowFlagField": "attritionFlag",
+        "backgroundImage": "url('images/Path 21827@2x.PNG')",
+        "data": {
+          "filter-count": 1000,
+          "percentage": -500
+        }
+      },
+      {
+        "target": "#attritionPercentage",
+        "id": "attritionPercentage",
+        "widgetType": "data-count",
+        "datafield": "tileInfo",
+        "title": "Attrition%",
+        "gridArea": "4/3/6/5",
+        "lapresponsiveGridarea": "5/4/8/7",
+        "responsiveGridarea": "9/9/17/17",
+        "valueField": "attritionPercentage",
+        "ArrowFlagField": "attritionPercentageFlag",
+        "backgroundImage": "url('images/Path 21827@2x.PNG')",
+        "data": {
+          "filter-count": 12,
+          "percentage": -1
+        }
+      },
+      {
+        "target": "#Global",
+        "widgetType": "global-chart",
+        "title": "Headcount",
+        "gridArea": "2/5/6/12",
+        "lapresponsiveGridarea": "2/7/8/17",
+        "responsiveGridarea": "37/1/47/17",
+        "headerField": "Global",
+        "datafield": "globalHeadCount",
+        "valuefield": "RegionWiseData",
+        "sessionKey": "region",
+        "dataFromIndividualAPI": false,
+        "type": "GET",
+        "apiURL": "http://localhost:3000/globalHeadCount",
+        "queryParams": [
+          {
+            "field": "month",
+            "valueFrom": "id"
+          },
+          {
+            "field": "year",
+            "valueFrom": "id"
+          }
+        ],
+        "backgroundImage": "url('images/Group 107149.PNG')",
+        "data": {
+          "filter-count": 23490,
+          "percentage": 1
+        }
+      },
+      {
+        "target": "#experts-view",
+        "widgetType": "list-view",
+        "title": "Business Unit Summary",
+        "gridArea": "6/1/10/5",
+        "lapresponsiveGridarea": "8/1/14/7",
+        "responsiveGridarea": "17/1/37/17",
+        "backgroundImage": "",
+        "datafield": "business_summary",
+        "data": {
+          "filter-count": 23.45,
+          "percentage": -300
+        }
+      },
+      {
+        "target": "#radius-pie",
+        "id": "radius-pie",
+        "widgetType": "pie-chart",
+        "title": "Headcount - BU wise",
+        "sessionKey": "bu",
+        "gridArea": "2/12/6/17",
+        "lapresponsiveGridarea": "8/7/14/17",
+        "responsiveGridarea": "47/1/67/17",
+        "datafield": "bu",
+        "dimension": "bu",
+        "group": "bu",
+        "innerRadius": 30,
+        "backgroundColor": "rgba(0,0,0,0)",
+        "fontFamily": "Inter",
+        "titleText": "Headcount - BU wise",
+        "titleAlign": "left",
+        "titleY": 8,
+        "titleColor": "#FFFFFF",
+        "titleFontSize": "20px",
+        "background": "rgba(0,0,0,0)",
+        "showLegends": true,
+        "legendLayout": "vertical",
+        "legendItemColor": "#8C98B2",
+        "legendsHoverColor": "#fff",
+        "legendAlign": "right",
+        "legendFloating": false,
+        "legendVerticalAlign": "top",
+        "legendY": 50,
+        "legendBackgroundColor": "rgba(0,0,0,0)",
+        "legendsItemWidth": 185,
+        "legendsWidth": 190,
+        "innerRadiusInPercentage": 20,
+        "showInfoInMiddle": false,
+        "infoTextContent": "",
+        "labelSpecificColors": [
+          {
+            "key": "RoW",
+            "value": "#8e00e5"
+          },
+          {
+            "key": "Public Sector",
+            "value": "#5eff5a"
+          },
+          {
+            "key": "Insurance BFS",
+            "value": "#ff9cfe"
+          },
+          {
+            "key": "Healthcare",
+            "value": "#f8a200"
+          },
+          {
+            "key": "Corporate",
+            "value": "#0278e6"
+          },
+          {
+            "key": "Consumer Services",
+            "value": "#ff6e90"
+          },
+          {
+            "key": "CRC Service Desk",
+            "value": "#64f0db"
+          },
+          {
+            "key": "BPS",
+            "value": "#ffcd6e"
+          },
+          {
+            "key": "Auto/Manufacturing",
+            "value": "#6154fc"
+          },
+          {
+            "key": "AP - SF",
+            "value": "#03c5fa"
+          }
+        ],
+        "colors": [
+          "#8E00E5",
+          "#0278E6",
+          "#03C5FA",
+          "#6154FC",
+          "#FFCD6E",
+          "#64F0DB",
+          "#ff9cfe",
+          "#FF6E90",
+          "#5EFF5A",
+          "#F8A200"
+        ],
+        "cx": 100,
+        "cy": "",
+        "legend": {
+          "itemHeight": 10,
+          "itemX": 200,
+          "itemY": 30,
+          "itemGap": 5,
+          "horizontal": false
+        }
+      },
+      {
+        "target": "#stacked-bar",
+        "id": "stacked-bar",
+        "widgetType": "row-chart",
+        "title": "Headcount Based on organization unit",
+        "sessionKey": "organizationUnit",
+        "gridArea": "10/1/15/9",
+        "lapresponsiveGridarea": "14/1/20/9",
+        "responsiveGridarea": "87/1/107/17",
+        "dimension": "organization_unit",
+        "group": "organization_unit",
+        "datafield": "organizationUnit",
+        "background": "rgba(0,0,0,0)",
+        "showLegends": false,
+        "legendsLayout": "horizontal",
+        "legendsColor": "#8C98B2",
+        "legendsHoverColor": "#fff",
+        "legendsAlignment": "bottom",
+        "legendsverticalAlign": "bottom",
+        "legendsbackground": "rgba(0,0,0,0)",
+        "XaxisCategories": [
+          "JAN",
+          "FEB",
+          "MAR",
+          "APR",
+          "MAY",
+          "JUN",
+          "JUL",
+          "AUG",
+          "SEP",
+          "OCT",
+          "NOV",
+          "DEC"
+        ],
+        "colors": [
+          "#8E00E5",
+          "#0278E6",
+          "#03C5FA",
+          "#6154FC",
+          "#FFCD6E",
+          "#64F0DB",
+          "#03C5FA",
+          "#FF6E90",
+          "#5EFF5A",
+          "#F8A200"
+        ]
+      },
+      {
+        "target": "#packed-bubble",
+        "id": "packed-bubble-chart",
+        "widgetType": "packed-bubble",
+        "title": "Attrition Categorisation",
+        "gridArea": "10/9/15/13",
+        "lapresponsiveGridarea": "20/1/26/6",
+        "responsiveGridarea": "107/1/127/17",
+        "dimension": "key",
+        "group": "count",
+        "withFilter": true,
+        "dataFromIndividualAPI": false,
+        "datafield": "AttritionCategorisation",
+        "type": "GET",
+        "apiURL": "http://localhost:3000/exit",
+        "backgroundColor": "rgba(0,0,0,0)",
+        "height": "100%",
+        "titleText": "",
+        "titleAlign": "left",
+        "titleColor": "#FFFFFF",
+        "tooltipUseHTML": true,
+        "tooltipFormat": "<p style='text-align: center'><b>{point.name}:</b></p> {point.value}",
+        "bubbleMinSize": "30%",
+        "bubbleMaxSize": "120%",
+        "bubbleZmin": 0,
+        "bubbleZmax": 1000,
+        "splitSeries": false,
+        "gravitationalConstant": 0.01,
+        "dataLabelsEnabled": true,
+        "dataLabelsColor": "#000",
+        "dataLabelsTextOutLine": "transparent",
+        "dataLabelsFontWeight": "legendBackgroundColor",
+        "dataLabelsFontSize": "8px",
+        "dataLabelsUseHTML": true,
+        "dataLabelsProperty": "y",
+        "dataLabelsOperator": ">",
+        "dataLabelsValue": 0,
+        "legendLayout": "horizontal",
+        "legendAlign": "left",
+        "legendVerticalAlign": "bottom",
+        "legendFloating": false,
+        "legendItemColor": "#8C98B2",
+        "legendItemHoverColor": "#fff",
+        "legendBackgroundColor": "rgba(0,0,0,0)",
+        "legendWidth": 300,
+        "legendItemWidth": 150,
+        "disableLegendClick": true,
+        "queryParams": [
+          {
+            "field": "month",
+            "valueFrom": "id"
+          },
+          {
+            "field": "year",
+            "valueFrom": "id"
+          },
+          {
+            "field": "type",
+            "valueFrom": "name",
+            "nameField": "id"
+          }
+        ],
+        "FilterFields": [
+          "voluntary",
+          "Involuntary"
+        ],
+        "colors": [
+          "#FFCD6E",
+          "#B336FF",
+          "#64F0DB",
+          "#FF89BB",
+          "#776CFF",
+          "#38D4FF",
+          "#46A6FF",
+          "#5EFF5A",
+          "#F8A200"
+        ]
+      },
+      {
+        "target": "#doubleSpline",
+        "widgetType": "doublespline",
+        "id": "doublespline",
+        "title": "Attrition Trend",
+        "gridArea": "10/13/15/17",
+        "lapresponsiveGridarea": "20/6/26/11",
+        "responsiveGridarea": "127/1/147/17",
+        "dimension": "gender",
+        "group": "gender",
+        "zoomType": "xy",
+        "backgroundColor": "rgba(0,0,0,0)",
+        "xAxisCategories": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "disableLegendClick": true,
+        "xAxisGridLineDashStyle": "shortdash",
+        "xAxisGridLineWidth": 1,
+        "xAxisGridLineColor": "#9a9c9b",
+        "xAxisCrosshair": true,
+        "xAxisLabelsColor": "#8C98B2",
+        "xAxisLabelsFontSize": "10px",
+        "yAxisTickInterval": 100,
+        "yAxisGridLineDashStyle": "shortdash",
+        "yAxisGridLineWidth": 1,
+        "yAxisGridLineColor": "#9a9c9b",
+        "yieldLabelsFormat": "{value}",
+        "yAxisLabelsColor": "#8C98B2",
+        "yAxisLabelsFontSize": "10px",
+        "dataLabelsEnabled": true,
+        "dataLabelsColor": "#8C98B2",
+        "dataLabelsTextOutLine": "transparent",
+        "legendLayout": "horizontal",
+        "legendAlign": "center",
+        "legendVerticalAlign": "bottom",
+        "legendFloating": false,
+        "legendItemColor": "#8C98B2",
+        "legendItemHoverColor": "#fff",
+        "legendBackgroundColor": "rgba(0,0,0,0)",
+        "legendWidth": 300,
+        "legendItemWidth": 150,
+        "dataFromIndividualAPI": false,
+        "datafield": "quaterlyAttrition_Count",
+        "type": "GET",
+        "apiURL": "http://localhost:3000/attritionGraphCount",
+        "queryParams": [
+          {
+            "field": "year",
+            "valueFrom": "id"
+          }
+        ]
+      },
+      {
+        "target": "#containerHigh",
+        "id": "containerHigh",
+        "widgetType": "composite-stacked-bar-chart",
+        "title": "Headcount Movement - Org Unit",
+        "gridArea": "6/9/10/17",
+        "lapresponsiveGridarea": "14/9/20/17",
+        "responsiveGridarea": "147/1/167/17",
+        "dimension": "gender",
+        "group": "gender",
+        "dataFromIndividualAPI": false,
+        "datafield": "headcountMovement",
+        "type": "GET",
+        "apiURL": "http://localhost:3000/headcountMovement",
+        "queryParams": [
+          {
+            "field": "year",
+            "valueFrom": "id"
+          }
+        ],
+        "backgroundColor": "rgba(0,0,0,0)",
+        "fontFamily": "Inter",
+        "titleText": "",
+        "titleAlign": "left",
+        "titleColor": "#FFFFFF",
+        "titleY": 8,
+        "xAxisCategories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "xAxisLabelsColor": "#8C98B2",
+        "yAxisAllowDecimals": false,
+        "yAxisMin": 0,
+        "yAxisTitleText": "",
+        "yAxisLabelsColor": "#8C98B2",
+        "yAxisStackLabelsEnabled": true,
+        "yAxisStackLabelsColor": "#8C98B2",
+        "yAxisStackLabelsTextoutline": "transparent",
+        "tooltipFormat": "<b>{key}</b><br/>{series.name}: {y}<br/>Total: {point.stackTotal}",
+        "legendAlign": "bottom",
+        "legendVerticalAlign": "bottom",
+        "legendFloating": false,
+        "legendItemColor": "#8C98B2",
+        "legendItemHoverColor": "#fff",
+        "legendBackgroundColor": "rgba(0,0,0,0)",
+        "legendX": 80,
+        "legendY": 25,
+        "colors": [
+          "#03C5FA",
+          "#3A52CB",
+          "#8E00E5"
+        ]
+      },
+      {
+        "target": "#stacked-bar1",
+        "id": "stacked-bar1",
+        "widgetType": "stacked-bar",
+        "title": "Headcount All",
+        "sessionKey": "bu",
+        "gridArea": "15/1/20/13",
+        "lapresponsiveGridarea": "26/1/32/17",
+        "responsiveGridarea": "167/1/187/17",
+        "dimension": "organization_unit",
+        "group": "organization_unit",
+        "disableLegendClick": true,
+        "datafield": "monthlyHeadCountBU",
+        "labelSpecificColors": [
+          {
+            "key": "RoW",
+            "value": "#8e00e5"
+          },
+          {
+            "key": "Public Sector",
+            "value": "#5eff5a"
+          },
+          {
+            "key": "Insurance BFS",
+            "value": "#ff9cfe"
+          },
+          {
+            "key": "Healthcare",
+            "value": "#f8a200"
+          },
+          {
+            "key": "Corporate",
+            "value": "#0278e6"
+          },
+          {
+            "key": "Consumer Services",
+            "value": "#ff6e90"
+          },
+          {
+            "key": "CRC Service Desk",
+            "value": "#64f0db"
+          },
+          {
+            "key": "BPS",
+            "value": "#ffcd6e"
+          },
+          {
+            "key": "Auto/Manufacturing",
+            "value": "#6154fc"
+          },
+          {
+            "key": "AP - SF",
+            "value": "#03c5fa"
+          }
+        ],
+        "colors": [
+          "#8E00E5",
+          "#0278E6",
+          "#03C5FA",
+          "#6154FC",
+          "#FFCD6E",
+          "#64F0DB",
+          "#03C5FA",
+          "#FF6E90",
+          "#5EFF5A",
+          "#F8A200"
+        ],
+        "backgroundColor": "rgba(0,0,0,0)",
+        "fontFamily": "Inter",
+        "titleText": "",
+        "titleAlign": "left",
+        "titleColor": "#FFFFFF",
+        "titleY": 8,
+        "legendEnabled": false,
+        "legendReversed": true,
+        "legendAlign": "bottom",
+        "legendVerticalAlign": "bottom",
+        "legendFloating": false,
+        "legendItemColor": "#8C98B2",
+        "legendItemHoverColor": "#fff",
+        "legendBackgroundColor": "rgba(0,0,0,0)",
+        "xAxisCategories": [
+          "JAN",
+          "FEB",
+          "MAR",
+          "APR",
+          "MAY",
+          "JUN",
+          "JUL",
+          "AUG",
+          "SEP",
+          "OCT",
+          "NOV",
+          "DEC"
+        ],
+        "xAxisLineWidth": 1,
+        "xAxisLineColor": "transparent",
+        "xAxisGridLineWidth": 0.2,
+        "xAxisGridLineColor": "#9a9c9b",
+        "xAxisMinorGridLineWidth": 0.5,
+        "xAxisLabelsColor": "#8C98B2",
+        "xAxisLabelsFontSize": "10px",
+        "yAxisMin": 0,
+        "yAxisGridLineWidth": 0.2,
+        "yAxisGridLineColor": "#9a9c9b",
+        "yAxisLabelsColor": "#8C98B2",
+        "yAxisLabelsFontSize": "10px",
+        "yAxisTitleText": "",
+        "yAxisStackLabelsEnabled": true,
+        "yAxisStackLabelsColor": "#8C98B2",
+        "yAxisStackLabelsTextoutline": "transparent",
+        "seriesStacking": "normal",
+        "seriesBorderWidth": 0,
+        "seriesDataLabelsEnabled": true,
+        "seriesPointPadding": 20,
+        "seriesPointWidth": 20,
+        "dataLabelsColor": "#000",
+        "dataLabelsTextOutLine": "transparent",
+        "applyCrossFilter": false
+      },
+      {
+        "target": "#pie-chart1",
+        "id": "pie-chart1",
+        "widgetType": "radius-pie",
+        "sessionKey": "gender",
+        "title": "Gender wise Headcount",
+        "gridArea": "6/5/10/9",
+        "lapresponsiveGridarea": "20/11/26/17",
+        "responsiveGridarea": "67/1/87/17",
+        "datafield": "Gender",
+        "dimension": "gender",
+        "group": "gender",
+        "innerRadius": 70,
+        "backgroundColor": "rgba(0,0,0,0)",
+        "fontFamily": "Inter",
+        "titleText": "",
+        "titleAlign": "left",
+        "titleY": 8,
+        "titleColor": "#FFFFFF",
+        "titleFontSize": "20px",
+        "subtitleUseHTML": true,
+        "subtitleFloating": true,
+        "subtitleVerticalAlign": "middle",
+        "subtitleY": 25,
+        "tooltipHeaderFormat": "",
+        "tooltipPointFormat": "<b> {point.name}({point.y})</b><br/>",
+        "legendEnabled": true,
+        "legendLayout": "horizontal",
+        "legendAlign": "left",
+        "legendVerticalAlign": "bottom",
+        "legendY": 0,
+        "legendBackgroundColor": "rgba(0,0,0,0)",
+        "legendWidth": 300,
+        "legendPadding": 0,
+        "legendItemWidth": 150,
+        "legendItemColor": "#8C98B2",
+        "legendItemHoverColor": "#fff",
+        "variablepiePointSelect": false,
+        "variablepieBorderColor": "transparent",
+        "variablepieCusrsor": "pointer",
+        "variablepieDataLabels": false,
+        "seriesMinPointSize": 0,
+        "seriesInnerSize": 70,
+        "seriesZmin": 0,
+        "seriesName": "Gender",
+        "seriesBorderRadius": 0,
+        "seriesInLegend": true,
+        "disableLegendClick": true,
+        "showInfoInMiddle": true,
+        "infoTextContent": "Headcount",
+        "labelSpecificColors": [
+          {
+            "key": "Male",
+            "value": "#38D4FF"
+          },
+          {
+            "key": "Female",
+            "value": "#FF6E90"
+          },
+          {
+            "key": "Unknown",
+            "value": "#808080"
+          }
+        ],
+        "colors": [
+          "#38D4FF",
+          "#FF6E90",
+          "#808080"
+        ],
+        "cx": 0,
+        "cy": 0,
+        "legend": {
+          "itemHeight": 10,
+          "itemX": 50,
+          "itemY": 230,
+          "itemGap": 5,
+          "horizontal": true
+        }
+      }
+    ]
+  }

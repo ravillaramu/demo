@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="css/default.css" />
+  <link rel="stylesheet" href="css/dark-blue.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="js/crossfilter.js"></script>
+  <script src="js/dc.js"></script>
+  <script src="js/griddy.js"></script>
+
+  <title>Gridsite - HR Dashboard</title>
+</head>
+<style>
+  select option {
+    margin: 40px;
+    color: #fff;
+    background: #080e35;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.25)
+  }
+</style>
+
+<body>
+  <div class="loader" id="loader">
+  </div>
+
+  <div id="title-bar-static" class="titlebar-static">
+    <div class="static-title-div">
+      <select name="year" id="year" class="titleDropMonth" onchange="cleanContainer(); fetchChartData()">
+        <option value="2022" selected>2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+
+      </select>
+      <select name="month" id="month" class="titleDropMonth" onchange="cleanContainer(); fetchChartData()">
+        <option value="">Month</option>
+        <option value="01">Jan</option>
+        <option value="02">Feb</option>
+        <option value="03">Mar</option>
+        <option value="04">Apr</option>
+        <option value="05">May</option>
+        <option value="06">Jun</option>
+        <option value="07">Jul</option>
+        <option value="08">Aug</option>
+        <option value="09">Sep</option>
+        <option value="10">Oct</option>
+        <option value="11">Nov</option>
+        <option value="12">Dec</option>
+      </select>
+      <button class="clearFilter" onclick="clearFilters()">
+        <span class="clearfilter-text">clear all filters</span>
+        <span class="clearfilter-img">
+          <img src="images/filter.png" alt="filterIcon">
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div id="container"> </div>
+  <script>
+    function cleanContainer() {
+      document.getElementById("container").innerHTML = "";
+    }
+    function fetchChartData() {
+      var maxGridSize = 0;
+      // var token = sessionStorage.getItem("token");
+      document.getElementById('loader').style.visibility = "visible";
+      // console.log("start", new Date);
+      // if (token) {
+        $.get("layouts/hr.json", function (data, resp) {
+          var payload = constructRequestBody(data.PAYLOAD_FIELDS);
+          data.COMPONENTS.forEach((val) => {
+            var devicewidth = $(window).width();
+            var gridValArr = val.gridArea.split('/');
+            if (devicewidth <= 400 && val.responsiveGridarea) {
+              gridValArr = val.responsiveGridarea.split('/');
+            } else if (devicewidth <= 1199 && val.lapresponsiveGridarea) {
+              gridValArr = val.lapresponsiveGridarea.split('/');
+            }
+
+            var gridVal = Number(gridValArr[2]);
+            if (maxGridSize < gridVal) {
+              maxGridSize = gridVal;
+            }
+            $(":root").css("--gridrow", maxGridSize);
+          });
+          var columnwidth = $("#container").width();
+          var rowheight = ((columnwidth / 100) * 5.25) + "px";
+          $(":root").css("--rowheight", rowheight);
+          var rowgap = ((columnwidth / 100) * 1) + "px";
+          $(":root").css("--rowgap", rowgap);
+
+          $(window).resize(function () {
+            var columnwidth = $("#container").width();
+            var rowheight = ((columnwidth / 100) * 5.25) + "px";
+            $(":root").css("--rowheight", rowheight);
+            var rowgap = ((columnwidth / 100) * 1) + "px";
+            $(":root").css("--rowgap", rowgap);
+          });
+          $.post({
+            url: data.API_URL,
+            contentType: "application/json; charset=utf-8",
+            // headers: {
+            //   Authorization: token
+            // },
+            data: JSON.stringify(payload),
+            dataType: 'json'
+          })
+            .done(function (res) {
+              if (res.code == 200) {
+                // $.get("layouts/data.json", function (res) {
+                // var cfData = res.data.map((val) => val._source);
+                // var cf = crossfilter(cfData);
+                var devicewidth = $(window).width();
+                data.COMPONENTS.forEach((widgetSettings, index) => {
+                  if (devicewidth <= 400 && widgetSettings.responsiveGridarea) {
+                    widgetSettings.gridArea = widgetSettings.responsiveGridarea;
+
+                    widgetSettings.legendLayout = widgetSettings.responsivelegendLayout ? widgetSettings.responsivelegendLayout : widgetSettings.legendLayout;
+                    widgetSettings.legendVerticalAlign = widgetSettings.responsivelegendVerticalAlign ? widgetSettings.responsivelegendVerticalAlign : widgetSettings.legendVerticalAlign;
+                    widgetSettings.legendVerticalAlign = widgetSettings.responsivelegendVerticalAlign ? widgetSettings.responsivelegendVerticalAlign : widgetSettings.legendVerticalAlign;
+                  } else if (devicewidth <= 1199 && widgetSettings.lapresponsiveGridarea) {
+                    widgetSettings.gridArea = widgetSettings.lapresponsiveGridarea;
+                    widgetSettings.legendLayout = widgetSettings.lapresponsivelegendLayout ? widgetSettings.lapresponsivelegendLayout : widgetSettings.legendLayout;
+                    widgetSettings.legendVerticalAlign = widgetSettings.lapresponsivelegendVerticalAlign ? widgetSettings.lapresponsivelegendVerticalAlign : widgetSettings.legendVerticalAlign;
+                  }
+                  $(widgetSettings.target).remove();
+                  widgetSettings.responseData = res;
+                  // widgetSettings.val = cfData;
+                  // widgetSettings.cf = cf;
+                    $("#container").appendItem(widgetSettings);
+                  if (index == (data.COMPONENTS.length - 1)) {
+                    // console.log("End", new Date);
+                    document.getElementById('loader').style.visibility = "hidden";
+                    var dcLegends = document.querySelectorAll(".dc-legend-item");
+                    for (let i = 0; i < dcLegends.length; i++) {
+                      var clone = dcLegends[i].cloneNode(true);
+                      dcLegends[i].replaceWith(clone);
+                    }
+                  }
+                });
+                $("#container").griddify();
+              }
+              else if (res.code == 401) {
+                document.getElementById('loader').style.visibility = "hidden";
+                location.href = '/dashboard-framework';
+              }
+            })
+            .fail(function (xhr, status, error) {
+              // error handling
+              console.log(status);
+              if (xhr && xhr.responseJSON && xhr.responseJSON.code == 401) {
+                location.href = '/dashboard-framework';
+              }
+              document.getElementById('loader').style.visibility = "hidden";
+            });
+        });
+      // }
+      // else {
+      //   location.href = '/';
+      // }
+    }
+
+    function constructRequestBody(PAYLOAD_FIELDS) {
+      var responseObj = {};
+      PAYLOAD_FIELDS.forEach(element => {
+        var tempVal = "";
+        if (element.valueFrom === "id") {
+          tempVal = document.getElementById(element.field) ? document.getElementById(element.field).value : "";
+        } else if (element.valueFrom === "name") {
+          tempVal = document.querySelector('input[name="' + element.field + 'RadioFilter"]:checked') ? document.querySelector('input[name="' + element.field + 'RadioFilter"]:checked').value : "";
+        }
+        else if (element.valueFrom === "session") {
+          tempVal = sessionStorage.getItem(element.key) ? JSON.parse(sessionStorage.getItem(element.key)) : "";
+        }
+        if (tempVal) {
+          responseObj[element.field] = tempVal;
+        }
+      });
+      return responseObj;
+    }
+
+    function clearFilters() {
+      document.getElementById("year").value = "2022";
+      document.getElementById("month").value = "";
+      // sessionStorage.clear();
+      for (var obj in sessionStorage) {
+        if (sessionStorage.hasOwnProperty(obj) && obj != "token") {
+          sessionStorage.removeItem(obj);
+        }
+      }
+      fetchChartData();
+    }
+
+    $(document).ready(function () {
+      // sessionStorage.clear();
+      // var token = sessionStorage.getItem('token');
+      // if (token) {
+        fetchChartData();
+      // } else {
+      //   location.href = '/dashboard-framework';
+      // }
+
+      // setInterval(function () {
+        // var token = sessionStorage.getItem('token');
+        // if (token) {
+          // fetchChartData();
+        // } else {
+        //   location.href = '/dashboard-framework';
+        // }
+      // }, 60000);
+    });
+  </script>
+  <div>
+  </div>
+
+</body>
+
+</html>

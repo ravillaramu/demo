@@ -1,0 +1,183 @@
+[
+  {
+    "target": "#title-bar",
+    "widgetType": "titlebar",
+    "title": "SCM Dashboard",
+    "gridArea": "1/1/2/16",
+    "backgroundImage": "url('images/Group 1.PNG')",
+    "data": {
+        "filter-count":6452,
+        "percentage": 200
+    }
+  },
+  {
+    "target": "#experts-view",
+    "widgetType": "list-view",
+    "title": "Expert's View",
+    "gridArea": "2/13/7/16",
+    "backgroundImage": "url('images/Mask Group 10.PNG')",
+    "data": {
+        "filter-count":23.45,
+        "percentage": -300
+    }
+  },
+  {
+    "target": "#total-sales",
+    "widgetType": "data-count",
+    "title": "Totol Sales",
+    "gridArea": "2/4/4/7",
+    "backgroundImage": "url('images/Mask Group 14.PNG')",
+    "data": {
+        "filter-count":11360,
+        "percentage": -20
+    }
+  },
+  {
+    "target": "#total-customers",
+    "widgetType": "data-count",
+    "title": "Total Customers",
+    "gridArea": "2/7/4/10",
+    "backgroundImage": "url('images/Mask Group 12.PNG')",
+    "data": {
+        "filter-count":23450000,
+        "percentage":12.34
+    }
+  },
+  {
+    "target": "#orders-received",
+    "widgetType": "data-count",
+    "title": "Order Received",
+    "gridArea": "2/10/4/13",
+    "backgroundImage": "url('images/Mask Group 11.PNG')",
+    "data": {
+        "filter-count":23.45,
+        "percentage": 123400000
+    }
+  },
+  {
+    "target": "#orders-shipped",
+    "widgetType": "data-count",
+    "title": "Order Shipped",
+    "gridArea": "2/1/4/4",
+    "backgroundImage": "url('images/Mask Group 13.PNG')",
+    "data": {
+        "filter-count":23.45,
+        "percentage": 12.34
+    }
+  },
+  {
+    "target": "#top5-countries",
+    "widgetType": "pie-chart",
+    "title": "Top 5 Regions by No of Orders",
+    "gridArea": "4/1/7/7",
+    "chart": {
+      "data" : [{
+        "value": 16000,
+        "key": "India"
+        }, {
+        "value": 5612,
+        "key": "US"
+        }, {
+        "value": 2908,
+        "key": "APAC"
+        }, {
+        "value": 2000,
+        "key": "ROW"
+        }],
+      "colors": []
+    }
+  },
+ 
+  {
+    "target": "#orders-recived1",
+    "widgetType": "bar-chart",
+    "title": "Total Orders Recived in 2022",
+    "gridArea": "4/7/7/13",
+    "chart": {
+      "data" : [{
+        "revenue": 3000,
+        "month": "01"
+        }, {
+        "revenue": 2612,
+        "month": "02"
+        }, {
+        "revenue": 1908,
+        "month": "03"
+        }, {
+        "revenue": 4000,
+        "month": "04"
+        }, {
+        "revenue": 2908,
+        "month": "05"
+        }, {
+        "revenue": 3000,
+        "month": "06"
+        }, {
+        "revenue": 1000,
+        "month": "07"
+        }, {
+        "revenue": 3000,
+        "month": "08"
+        }, {
+        "revenue": 2500,
+        "month": "09"
+        }, {
+        "revenue": 2300,
+        "month": "10"
+        }, {
+        "revenue": 1000,
+        "month": "11"
+        }, {
+        "revenue": 3500,
+        "month": "12"
+        }],
+        "colors": []
+    }
+  },
+  {
+    "target": "#orders-recived",
+    "widgetType": "bar-chart",
+    "title": "Total Orders Recived in 2022",
+    "gridArea": "7/1/10/13",
+    "chart": {
+      "data" : [{
+        "revenue": 3000,
+        "month": "01"
+        }, {
+        "revenue": 2612,
+        "month": "02"
+        }, {
+        "revenue": 1908,
+        "month": "03"
+        }, {
+        "revenue": 4000,
+        "month": "04"
+        }, {
+        "revenue": 2908,
+        "month": "05"
+        }, {
+        "revenue": 3000,
+        "month": "06"
+        }, {
+        "revenue": 1000,
+        "month": "07"
+        }, {
+        "revenue": 3000,
+        "month": "08"
+        }, {
+        "revenue": 2500,
+        "month": "09"
+        }, {
+        "revenue": 2300,
+        "month": "10"
+        }, {
+        "revenue": 1000,
+        "month": "11"
+        }, {
+        "revenue": 3500,
+        "month": "12"
+        }],
+        "colors": []
+    }
+  }
+]
